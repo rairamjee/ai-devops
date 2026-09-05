@@ -1,0 +1,11 @@
+# Lab 0.1, Part B (optional) — run a pretrained transformer on the CPU.
+#
+# Install PyTorch FIRST from its CPU index so pip does not pull the default
+# build with several GB of CUDA libraries you do not need for this lab:
+#
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-pretrained.txt
+#
+# (macOS wheels on PyPI are already CPU-only; the first line is still harmless.)
+torch>=2.2
+transformers>=4.40

@@ -1,0 +1,11 @@
+# Keep the build context small: only the files the Dockerfile COPYs matter.
+# Without this, `docker build .` would ship your virtualenv and any trained
+# artifacts to the daemon on every build.
+.venv/
+venv/
+artifacts/
+__pycache__/
+*.joblib
+*.sha256
+.git/
+README.md

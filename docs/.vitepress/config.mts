@@ -7,7 +7,10 @@ const phases: { num: string; slug: string; title: string; lessons?: { text: stri
     num: '00',
     slug: '00-orientation',
     title: 'Orientation',
-    lessons: [{ text: 'Day 1 — What Is AI?', file: '01-what-is-ai' }],
+    lessons: [
+      { text: 'Day 1 — What Is AI?', file: '01-what-is-ai' },
+      { text: 'Day 2 — Set Up Your Environment', file: '02-environment-setup' },
+    ],
   },
   { num: '01', slug: '01-python', title: 'Python for AI/DevOps' },
   { num: '02', slug: '02-ai-fundamentals', title: 'AI Fundamentals' },

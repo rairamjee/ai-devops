@@ -30,7 +30,7 @@ By the end of this phase you can:
 | # | Lesson | Status |
 |---|---|---|
 | 01 | [Day 1 — What Is AI?](./01-what-is-ai.md) | ✅ |
-| 02 | Day 2 — Set up your environment (Python, Docker, kind, verification script) | 📋 |
+| 02 | [Day 2 — Set Up Your Environment](./02-environment-setup.md) | ✅ |
 | 03 | Day 3 — The AI production stack: the master mental model, layer by layer | 📋 |
 | 04 | Day 4 — How to work through this course and build a portfolio while you learn | 📋 |
 
@@ -39,7 +39,7 @@ By the end of this phase you can:
 | Lab | Difficulty | Time | Environment | Status |
 |---|---|---|---|---|
 | [0.1 — Run Your First Model](./01-what-is-ai.md#hands-on-lab-0-1-run-your-first-model) | 🟢 | 30–45 min | Local, CPU only | ✅ |
-| 0.2 — Verify your environment (Python, Docker, kind, kubectl) with a single script | 🟢 | 30 min | Local | 📋 |
+| [0.2 — Verify your environment and containerise your first model](./02-environment-setup.md#hands-on-lab-0-2-verify-your-environment) | 🟢 | 45–60 min | Local, Docker + kind | ✅ |
 
 ## Phase project
 

@@ -1,0 +1,44 @@
+# Lab 0.3 — Deliberately broken: a memory limit smaller than the runtime needs.
+#
+# Same image, same command. The only change is the memory limit. Python plus
+# NumPy plus scikit-learn need well over 64 MiB just to import, before the
+# model is even loaded, so the kernel kills the process during startup.
+# This is exactly what happens when a model's memory request is copied from
+# a smaller model: OOMKilled before the first request.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pod-health-predict-oom
+  labels:
+    app: pod-health
+    lesson: phase-00-day-3
+    scenario: oom
+spec:
+  backoffLimit: 1
+  ttlSecondsAfterFinished: 600
+  template:
+    metadata:
+      labels:
+        app: pod-health
+        scenario: oom
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: predict
+          image: pod-health:v1
+          imagePullPolicy: Never
+          env:
+            - name: MODEL_PATH
+              value: /model/pod-health-model-v1.joblib
+          resources:
+            requests:
+              cpu: 250m
+              memory: 32Mi
+            limits:
+              memory: 32Mi      # <- too small on purpose
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]

@@ -10,6 +10,7 @@ const phases: { num: string; slug: string; title: string; lessons?: { text: stri
     lessons: [
       { text: 'Day 1 — What Is AI?', file: '01-what-is-ai' },
       { text: 'Day 2 — Set Up Your Environment', file: '02-environment-setup' },
+      { text: 'Day 3 — The AI Production Stack', file: '03-ai-production-stack' },
     ],
   },
   { num: '01', slug: '01-python', title: 'Python for AI/DevOps' },

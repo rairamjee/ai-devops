@@ -1,0 +1,48 @@
+# Lab 0.3 — Run the Day 1 model as a Kubernetes Job.
+#
+# A Job runs a pod to completion: the right shape for "load a model, make
+# predictions, exit". Long-running inference services are Deployments (Phase 01
+# onward); the resource and probe lessons are identical.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pod-health-predict
+  labels:
+    app: pod-health
+    lesson: phase-00-day-3
+spec:
+  # Do not retry forever: a model that cannot load will not fix itself.
+  backoffLimit: 1
+  # Clean up finished pods after 10 minutes so the namespace stays tidy.
+  ttlSecondsAfterFinished: 600
+  template:
+    metadata:
+      labels:
+        app: pod-health
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: predict
+          # Built in Lab 0.2 and loaded into kind with `kind load docker-image`.
+          image: pod-health:v1
+          # kind has the image locally; never pull. In a real cluster this would
+          # be a registry path with an immutable tag or digest.
+          imagePullPolicy: Never
+          env:
+            - name: MODEL_PATH
+              value: /model/pod-health-model-v1.joblib
+          resources:
+            # Requests are what the scheduler reserves; limits are the ceiling
+            # the kernel enforces. For AI workloads, memory is the number that
+            # matters: it is set by the runtime + model size, not by guessing.
+            requests:
+              cpu: 250m
+              memory: 192Mi
+            limits:
+              memory: 384Mi
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]

@@ -17,6 +17,7 @@ Labs are the core of the course. Each one is practical, reproducible, incrementa
 |---|---|---|---|---|
 | [0.1 — Run Your First Model](/curriculum/00-orientation/01-what-is-ai#hands-on-lab-0-1-run-your-first-model) | 00 Orientation | 🟢 | 45–60 min | Local, CPU only |
 | [0.2 — Verify Your Environment and Containerise Your First Model](/curriculum/00-orientation/02-environment-setup#hands-on-lab-0-2-verify-your-environment) | 00 Orientation | 🟢 | 45–60 min | Local, Docker + kind |
+| [0.3 — Run the Model on Kubernetes and Break It](/curriculum/00-orientation/03-ai-production-stack#hands-on-lab-0-3-run-the-model-on-kubernetes) | 00 Orientation | 🟡 | 45–60 min | Local, kind |
 
 ## Planned flagship labs
 

@@ -8,7 +8,7 @@ Status legend: ✅ available · 🚧 in progress · 📋 planned.
 
 | Phase | Subject | Lessons | Labs | Project | Status |
 |---|---|---|---|---|---|
-| 00 | Orientation | 1 / 4 | 1 / 2 | — | 🚧 |
+| 00 | Orientation | 4 / 4 | 4 / 4 | — | ✅ |
 | 01 | Python for AI/DevOps | 0 / 7 | 0 / 3 | P1 Kubernetes Health API | 📋 |
 | 02 | AI Fundamentals | 0 / 6 | 0 / 2 | Model resource estimator | 📋 |
 | 03 | Math for AI | 0 / 5 | 0 / 2 | Matmul benchmark | 📋 |
@@ -29,6 +29,7 @@ Status legend: ✅ available · 🚧 in progress · 📋 planned.
 
 ### Changelog
 
+- **2026-09-06** — Phase 00 complete. Day 1 deepened (mental models, three deployment modes, misconceptions, real-world scenario, life of a request and of a model). Day 2 *Set Up Your Environment* with Lab 0.2 (verification script, containerised model, measured image and startup anatomy). Day 3 *The AI Production Stack* with Lab 0.3 (Kubernetes Job with calculated limits, deliberate `OOMKilled`, diagnosis). Day 4 *How to Work Through This Course* with Lab 0.4 (learning journal, portfolio repository, interview stories) and the project documentation templates under `examples/templates/`. All lab outputs in the lessons are from real runs.
 - **2026-09-05** — Repository bootstrapped: README, roadmap, progress, design specification, VitePress site, 18 phase overviews, Day 1 lesson *What Is AI?* with Lab 0.1 *Run Your First Model* (CPU-only).
 
 ## Learner checklist

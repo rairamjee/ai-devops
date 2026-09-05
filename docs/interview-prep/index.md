@@ -19,14 +19,17 @@ Interviewers for these roles rarely want a definition. They want to hear you con
 
 - Why are GPUs used for AI? What does a GPU do better than a CPU? *(Phases 03, 13)*
 - Why does GPU memory matter so much? How do you estimate the memory a model needs? → [Day 1](/curriculum/00-orientation/01-what-is-ai#interview-questions), then Phases 06 and 13
-- How do you serve a model? What does an inference server do? *(Phases 06, 07, 14)*
-- What is batching and why does it improve GPU utilisation? *(Phases 13, 14, 16)*
+- How do you serve a model? What does an inference server do, and why not just wrap the model in Flask? → [Day 3](/curriculum/00-orientation/03-ai-production-stack#interview-questions), then Phases 06, 07, 14
+- What is batching and why does it improve GPU utilisation? → [Day 1](/curriculum/00-orientation/01-what-is-ai#interview-questions), then Phases 13, 14, 16
+- How do you make a machine-learning environment reproducible? Why are AI container images so big? → [Day 2](/curriculum/00-orientation/02-environment-setup#interview-questions)
+- How do you set memory requests for a model container? → [Day 3](/curriculum/00-orientation/03-ai-production-stack#interview-questions)
 
 ## Kubernetes
 
 - How do you schedule GPU workloads on Kubernetes? What are device plugins, taints, tolerations and node affinity for? *(Phase 14)*
 - How do you autoscale inference? What signal do you scale on? *(Phase 14)*
-- Where do model weights live and how do you avoid downloading them on every pod start? *(Phase 14)*
+- Where do model weights live and how do you avoid downloading them on every pod start? → [Day 2](/curriculum/00-orientation/02-environment-setup#interview-questions) for the bake-or-mount trade-off, then Phase 14
+- Job or Deployment for a model workload, and why? A pod is `OOMKilled` at startup with no logs: walk me through it. → [Day 3](/curriculum/00-orientation/03-ai-production-stack#interview-questions)
 
 ## RAG
 
@@ -60,6 +63,10 @@ Interviewers for these roles rarely want a definition. They want to hear you con
 - Design an incident-investigation assistant with safe remediation. *(Phase 17)*
 - What happens at 10× traffic? What happens when the GPU node dies? *(every phase)*
 
+## Behavioural
+
+- Tell me about a project you built recently. Describe a production issue you debugged. How do you learn new technology? How do you use AI tools in your work? → [Day 4](/curriculum/00-orientation/04-how-to-learn-and-build-your-portfolio#interview-questions), which also gives the five-part story shape to answer them with.
+
 ## Presenting your projects
 
-For each of the eight [projects](/projects/), prepare a two-minute walkthrough: architecture, SLOs, scaling story, failure modes, security controls, cost, and what you would change with more time.
+For each of the eight [projects](/projects/), prepare a two-minute walkthrough: architecture, SLOs, scaling story, failure modes, security controls, cost, and what you would change with more time. Day 4 shows how to turn a lab into that story.

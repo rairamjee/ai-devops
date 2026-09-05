@@ -18,7 +18,7 @@ M7 Capstone           17 AI-SRE Platform
 
 | Phase | Subject | Goal | Tangible output | Est. effort | Status |
 |---|---|---|---|---|---|
-| 00 | Orientation | Understand what AI is, how the course works, and get a working environment | First model running locally | 1 week | 🚧 |
+| 00 | Orientation | Understand what AI is, see the whole production stack, get a working environment, start a portfolio | First model trained, containerised, run and OOM-killed on Kubernetes; portfolio repository | 1 week | ✅ |
 | 01 | Python for AI/DevOps | Enough Python to build APIs, call the Kubernetes API and package code | **Project 1: Kubernetes Health API** | 2 weeks | 📋 |
 | 02 | AI Fundamentals | Explain AI/ML/DL/GenAI/LLMs, training vs inference, tokens, embeddings, context windows | Model resource estimator CLI | 1 week | 📋 |
 | 03 | Math for AI | Vectors, matrices, dot products, statistics, gradients, gradient descent | Matrix-multiply benchmark + gradient descent from scratch | 1 week | 📋 |

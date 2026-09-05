@@ -1,0 +1,18 @@
+{
+  "name": "ai-devops",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI for DevOps — a production-oriented curriculum taking a DevOps engineer from zero AI knowledge to AI Platform Engineer.",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
